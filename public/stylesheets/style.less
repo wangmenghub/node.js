@@ -1,0 +1,1117 @@
+html, body, h1, h2, h3, h4, h5, h6, div, dl, dt, dd, ul, ol, li, p, table, caption, th, td, form, fieldset, legend, input, button, textarea, menu {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #333;
+    outline: 0;
+    line-height: 1.8;
+    font-family:"Microsoft YaHei", "微软雅黑", '宋体',"Hiragino Sans GB", Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+
+}
+#margin-top{
+    margin-top: 70px;
+}
+
+em, strong, b {
+    font-weight: bold;
+}
+
+li {
+    list-style: none;
+}
+
+a, button {
+    cursor: pointer;
+}
+
+del, ins, u, s, a, a:hover {
+    text-decoration: none;
+}
+
+a, a:hover {
+    color: #333;
+}
+
+.clear {
+    clear: both;
+}
+
+.border {
+    width: 100%;
+    border-bottom: 1px solid #e2e2e2;
+
+}
+
+// 导航栏
+.navbar {
+    margin-bottom: 0;
+    border: none;
+}
+.navbar-default{
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.navbar-nav li a {
+    line-height: 40px;
+}
+.navbar-default .navbar-nav>li>a:hover{
+    color:#65c4aa;
+}
+.navbar-nav li:hover {
+    background: #FFFFFF;
+}
+
+#logo_text {
+    display: inline;
+}
+
+// index页面
+/*首屏全屏*/
+html, body, .g-doc {
+    height: 100%;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    *min-width: 1024px;
+}
+
+body.mobile .section {
+    background-attachment: initial;
+}
+
+.g-bd {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/*小图标背景 定位方式实现*/
+.u-btn b, .u-gobtn, .u-golink, .m-layer .lyclose, .banner-icon, .banner-title-icon {
+    background: url(../images/icon.png) no-repeat -9999px -9999px;
+}
+
+.m-wrap {
+    width: 1124px;
+    margin: 0 auto;
+}
+
+.m-bd {
+    height: 580px;
+    position: relative;
+    z-index: 10;
+    background-color: #f6f6f6;
+}
+
+// 首屏向下箭头定位
+.m-hdtlt .u-gobtn {
+    top: -18px;
+}
+
+.m-bd .m-wrap {
+    display: block;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    .box-inner {
+        height: 100%;
+        display: table-cell;
+        vertical-align: middle;
+        *height: auto;
+        *padding: 3% 0;
+        *padding-top: 5%;
+    }
+
+    .col {
+        display: table-cell;
+        vertical-align: middle;
+        *max-width: 510px;
+    }
+}
+// 固定的背景图片
+.section {
+    width: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #f6f6f6;
+    background-position: center top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.imgbg0 {
+    background: url(../images/newimages/bgs/bg0-lg.jpg) no-repeat center;
+    background-size: 100% 100%;
+}
+
+.imgbg1 {
+    background-image: url(../images/newimages/bgs/bg2.jpg);
+}
+
+.imgbg2 {
+    background-image: url(../images/newimages/bgs/bg3.jpg);
+}
+
+.imgbg3 {
+    background-image: url(../images/newimages/bgs/bg4.jpg);
+}
+
+.imgbg4 {
+    background-image: url(../images/newimages/bgs/bg5.jpg);
+}
+
+@media screen and (min-width: 1600px), screen and (min-height: 800px), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-device-pixel-ratio: 2) {
+
+    .imgbg0 {
+        background-image: url(../images/newimages/bgs/bg0-lg.jpg);
+    }
+
+    .imgbg1 {
+        background-image: url(../images/newimages/bgs/bg2-lg.jpg);
+    }
+
+    .imgbg2 {
+        background-image: url(../images/newimages/bgs/bg3-lg.jpg);
+    }
+
+    .imgbg3 {
+        background-image: url(../images/newimages/bgs/bg4-lg.jpg);
+    }
+
+    .imgbg4 {
+        background-image: url(../images/newimages/bgs/bg5-lg.jpg);
+    }
+}
+// 首屏下拉按钮处文字框
+.m-hdtlt {
+    display: table;
+    height: 14%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    max-height: 180px;
+    *height: 120px;
+    background-image: url(../images/newimages/tlt-rep.png);
+    background-repeat: repeat-x;
+    .tt {
+        display: table-cell;
+        vertical-align: middle;
+        height: 100%;
+        *height: auto;
+        *line-height: 120px;
+        font-weight: normal;
+        font-size: 22px;
+        text-align: center;
+    }
+}
+
+// 首屏购买按钮盒子
+.m-mnbox {
+    color: #fff;
+    font-size: 14px;
+    width: 18%;
+    margin-top: 200px;
+    margin-left: 100px;
+    //border: 1px solid #ffffff;
+    img{
+        margin:50px 0 100px -23px;
+        width:250px;
+        height: 80px;
+    }
+    //.hdline {
+    //    color: #ffffff;
+    //    font-size: 2.5em;
+    //    font-weight: normal;
+    //    margin-bottom: 20px;
+    //    font-size: 2em \9;
+    //    white-space: nowrap;
+        //font-family: 楷体;
+        //发光字
+        //text-shadow: 1px 0 0 #c8328c, 0 1px 0 #c8328c,
+        //             0 -1px 0 #c8328c, -1px 0 0 #c8328c,
+        //             1px 0 1px #c8328c, 0 1px 1px #c8328c,
+        //             0 -1px 1px #c8328c, -1px 0 1px #c8328c;
+    //}
+    .price {
+        font-size: 3.0em;
+        margin-bottom: 15px;
+    }
+    //.subtlt {
+    //    color: #65c4aa;
+    //    margin-top: 20px;
+    //    font-weight: normal;
+    //    font-size: 1.4em;
+        //font-family: 楷体;
+    //    发光字
+    //    text-shadow: 1px 0 0 #c8328c, 0 1px 0 #c8328c,
+    //        0 -1px 0 #c8328c, -1px 0 0 #c8328c,
+    //    1px 0 1px #c8328c, 0 1px 1px #c8328c,
+    //        0 -1px 1px #c8328c, -1px 0 1px #c8328c;
+    //}
+    .p {
+        color: #000000;
+        margin-top: 10px;
+    }
+}
+.btn-top{
+    position: absolute;
+    left: 50%;
+    bottom: 18%;
+    margin-left: -75px;
+    cursor: pointer;
+    z-index: 1000;
+
+}
+
+@media screen and (min-width: 480px) {
+    .m-wrap {
+        width: 460px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .m-wrap {
+        width: 755px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .m-wrap {
+        width: 970px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .m-wrap {
+        width: 1145px;
+    }
+}
+
+@media screen and (min-width: 1900px) {
+    .m-wrap {
+        width: 1745px;
+    }
+}
+
+
+@media screen and (max-width: 1366px) {
+    //.m-mnbox {
+    //    margin-top: 80px;
+    //    margin-left: 200px;
+    //}
+}
+
+@media screen and (max-width: 1199px) {
+    .m-bd0 .m-wrap .box {
+        padding: 80px 0 120px;
+    }
+
+    .m-hdtlt .tt {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .m-bd0 .m-wrap .box {
+        padding: 80px 0 105px;
+    }
+
+    .m-hdtlt .tt {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .m-hdtlt {
+        height: 100px;
+    }
+
+    .m-bd0 .m-wrap .box {
+        padding: 80px 0 100px;
+    }
+
+    .m-hdtlt .tt {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .m-wrap {
+        width: 360px;
+    }
+
+    .m-hdtlt .tt {
+        font-size: 18px;
+    }
+}
+
+// 向下箭头
+.u-gobtn {
+    position: absolute;
+    border-radius: 50px;
+    left: 50%;
+    bottom: -22px;
+    height: 42px;
+    width: 44px;
+    margin-left: -27px;
+    cursor: pointer;
+    background-position: -4px -78px;
+    z-index: 1000;
+}
+
+// 下载按钮
+
+.u-btn {
+    //position: absolute;
+    //margin-top: 24%;
+    //margin-left: 18%;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    //width: 120px;
+    padding: 0 28px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    border: 1px #26C6A1 solid;
+    color: #26C6A1;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: transparent;
+    b {
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        margin-right: 8px;
+        margin-top: -4px;
+        *margin-top: -1px;
+    }
+}
+
+.u-btn, .u-btn * {
+    //vertical-align: middle;
+}
+
+.u-btn:hover {
+    background: #26C6A1;
+    color: #fff;
+}
+
+.u-btn-w2 {
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+}
+
+/////////////////////////// 震动模块
+.mimi-one {
+    background-color: #ffffff;
+    height: 100%;
+}
+
+.shake-block {
+    height: 100%;
+}
+
+.mimi-one .container .shake-block .shake-left-left {
+    background: url(../images/shake_left_right.png) center no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    width: 30px;
+    height: 416px;
+    display: inline-block;
+
+}
+
+.mimi-one .container .shake-block .shake-left-middle {
+    background: url(../images/126x304.png) center no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    width: 173px;
+    height: 416px;
+    display: inline-block;
+    margin-left: 12%
+}
+
+.mimi-one .container .shake-block .shake-left-right {
+    background: url(../images/shake_left_left.png) center no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    width: 30px;
+    height: 416px;
+    display: inline-block;
+    margin-left: 15%;
+}
+
+.long-shake {
+    -webkit-animation: long-shake 1.5s ease infinite;
+    -moz-animation: long-shake 1.5s ease infinite;
+    -o-animation: long-shake 1.5s ease infinite;
+    animation: long-shake 1.5s ease infinite;
+}
+
+.middle-shake {
+    -webkit-animation: middle-shake 0.12s ease infinite;
+    -moz-animation: middle-shake 0.12s ease infinite;
+    -o-animation: middle-shake 0.12s ease infinite;
+    animation: middle-shake 0.12s ease infinite;
+}
+
+.short-shake {
+    -webkit-animation: short-shake 0.08s ease infinite;
+    -moz-animation: short-shake 0.08s ease infinite;
+    -o-animation: short-shake 0.08s ease infinite;
+    animation: short-shake 0.08s ease infinite;
+}
+
+@-webkit-keyframes long-shake {
+    0%, 100%, 70% {
+        -webkit-transform: translateX(0)
+    }
+    15%, 25%, 3%, 35%, 45%, 55%, 65%, 9% {
+        -webkit-transform: translateX(-2px)
+    }
+    12%, 20%, 30%, 40%, 50%, 6%, 60% {
+        -webkit-transform: translateX(2px)
+    }
+}
+
+@-moz-keyframes long-shake {
+    0%, 100%, 70% {
+        -moz-transform: translateX(0)
+    }
+    15%, 25%, 3%, 35%, 45%, 55%, 65%, 9% {
+        -moz-transform: translateX(-2px)
+    }
+    12%, 20%, 30%, 40%, 50%, 6%, 60% {
+        -moz-transform: translateX(2px)
+    }
+}
+
+@keyframes long-shake {
+    0%, 100%, 70% {
+        transform: translateX(0)
+    }
+    15%, 25%, 3%, 35%, 45%, 55%, 65%, 9% {
+        transform: translateX(-2px)
+    }
+    12%, 20%, 30%, 40%, 50%, 6%, 60% {
+        transform: translateX(2px)
+    }
+}
+
+@-webkit-keyframes middle-shake {
+    0% {
+        -webkit-transform: translateX(0)
+    }
+    33.3% {
+        -webkit-transform: translateX(2px)
+    }
+    66.6% {
+        -webkit-transform: translateX(-2px)
+    }
+    100% {
+        -webkit-transform: translateX(2px)
+    }
+}
+
+@-moz-keyframes middle-shake {
+    0% {
+        -moz-transform: translateX(0)
+    }
+    33.3% {
+        -moz-transform: translateX(2px)
+    }
+    66.6% {
+        -moz-transform: translateX(-2px)
+    }
+    100% {
+        -moz-transform: translateX(2px)
+    }
+}
+
+@keyframes middle-shake {
+    0% {
+        transform: translateX(0)
+    }
+    33.3% {
+        transform: translateX(2px)
+    }
+    66.6% {
+        transform: translateX(-2px)
+    }
+    100% {
+        transform: translateX(2px)
+    }
+}
+
+@-webkit-keyframes short-shake {
+    0% {
+        -webkit-transform: translateX(0)
+    }
+    33.3% {
+        -webkit-transform: translateX(2px)
+    }
+    66.6% {
+        -webkit-transform: translateX(-2px)
+    }
+    100% {
+        -webkit-transform: translateX(2px)
+    }
+}
+
+@-moz-keyframes short-shake {
+    0% {
+        -moz-transform: translateX(0)
+    }
+    33.3% {
+        -moz-transform: translateX(2px)
+    }
+    66.6% {
+        -moz-transform: translateX(-2px)
+    }
+    100% {
+        -moz-transform: translateX(2px)
+    }
+}
+
+@keyframes short-shake {
+    0% {
+        transform: translateX(0)
+    }
+    33.3% {
+        transform: translateX(2px)
+    }
+    66.6% {
+        transform: translateX(-2px)
+    }
+    100% {
+        transform: translateX(2px)
+    }
+}
+
+.shake-left {
+    margin-top: 37px;
+}
+
+.one-text {
+    font-size: 1.4em;
+    p {
+        margin: 22px 0 42px 0;
+    }
+
+}
+
+.shake-right {
+    h1 {
+        margin-top: 80px;
+    }
+}
+
+.shake-right-block {
+    width: 70px;
+    margin-right: 5%;
+    height: 92px;
+    float: left;
+    cursor: pointer;
+
+}
+
+.shake-right-block-icon {
+    width: 52px;
+    height: 52px;
+    margin: 8px auto
+}
+
+.shake-right-block-icon-box {
+    margin-left: 20px;
+    overflow: hidden;
+    .cur {
+        border: 1px #65c4aa solid;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+    }
+}
+
+.shake-right-block-icon.shake-icon1 {
+    background: url(../images/icon.png) 0px 0px no-repeat;
+}
+
+.shake-right-block-icon.shake-icon2 {
+    background: url(../images/icon.png) -105px 0px no-repeat;
+
+}
+
+.shake-right-block-icon.shake-icon3 {
+    background: url(../images/icon.png) -210px 0px no-repeat;
+}
+
+.shake-right-block-icon.shake-icon4 {
+    background: url(../images/icon.png) -315px 0px no-repeat;
+}
+
+.shake-right-block p {
+    text-align: center;
+    color: #4a494d;
+}
+
+//////////////////////////// 远程控制块
+.mimi-two {
+    height: 100%;
+    h1 {
+        margin: 20px 0 30px 0;
+    }
+    .mimi-two-img {
+        margin: 68px 0 0 90px;
+    }
+    .mimi-two-text {
+        padding-top: 20%;
+        font-size: 1.4em;
+        p {
+            margin: 22px 0 30px 0;
+        }
+        a {
+            display: block;
+            width: 243px;
+            height: 60px;
+            background: #65c4aa;
+            border-radius: 5px;
+            color: #ffffff;
+            margin: 15px 0 0 5px;
+            position: relative;
+            span {
+                display: inline-block;
+                width: 36px;
+                height: 45px;
+                margin: 10px 20px 10px 30px;
+            }
+            b {
+                font-weight: normal;
+                position: absolute;
+                top: 12px;
+            }
+
+        }
+    }
+}
+
+.down-btn-ios {
+    background: url("../images/icon.png") -366px -137px;
+}
+
+.down-btn-android {
+    background: url("../images/icon.png") -366px -72px;
+}
+
+.mimi-two-inner {
+    height: 100%;
+}
+/////////////////////////软件介绍块
+
+.header {
+    h1 {
+        margin: 60px 0 25px 0;
+    }
+    margin-bottom: 2%;
+    p{
+        font-size: 1.4em;
+    }
+}
+
+.img-1 {
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    p{
+        font-size: 1.2em;
+
+    }
+    .p {
+        margin-top: 15px;
+
+    }
+
+}
+//手机端隐藏版本信息号
+@media screen and (min-width: 600px) {
+    .version {
+        display: none;
+    }
+
+    .pc-none {
+        display: none;
+    }
+
+    .bg-image {
+        display: none;
+    }
+}
+
+// 页脚
+.footer-top {
+    background-color: #333333;
+    border-bottom: 1px solid #252525;
+    height: 200px;
+    .box {
+        position: relative;
+        height: 180px;
+    }
+    ul {
+        list-style: none;
+        a {
+            color: #999999;
+            text-decoration: none;
+        }
+        span{
+            color: #999999;
+            cursor: default;
+        }
+    }
+    .div-left,{
+        position: absolute;
+        margin-left: 160px;
+
+    }
+    .div-left .div-left-1, .div-left-2, .div-left-3{
+        float: left;
+        margin: 80px 0 50px 65px;
+
+    }
+    .div-left-4{
+        float: left;
+        margin: 40px 20px 0 70px;
+        img{
+            width: 100px;
+            height: 100px;
+        }
+    }
+    .div-left-5{
+        float: left;
+        margin: 40px 50px 0 20px;
+        img{
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+}
+
+.footer {
+    border-top: 1px solid #424242;
+    background-color: #333333;
+    position: relative;
+    p {
+        color: #666666;
+    }
+}
+
+////小屏幕隐藏底部二维码
+//@media screen and (max-width: 1310px) {
+//    footer:before{
+//        display: none;
+//    }
+//}
+//小屏幕隐藏底部页脚信息
+@media screen and (max-width: 1024px) {
+    .footer-top {
+        display: none;
+    }
+}
+
+////底部二维码
+//footer:before {
+//     content: "";
+//     position: absolute;
+//     background: url(../images/code.png) center center no-repeat;
+//     width: 150px;
+//     height: 150px;
+//     right: 20px;
+//     left: 88%;
+//     bottom: 50px;
+// }
+
+// about页面
+.about-top {
+    background-color: #65c4aa;
+    height: 361px;
+    padding-top: 104px;
+    img {
+        margin: 0 auto;
+    }
+}
+
+.about-inner {
+    margin: 50px 0 100px;
+    // 背景渐变色
+    //background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.3) 100%, #ffffff 100%);
+    h1 {
+        margin: 20px auto;
+        font-size: 28px;
+    }
+}
+
+// contact页面
+.contact {
+    h1 {
+        margin: 30px 0 10px 20px;
+    }
+    h2 {
+        margin: 20px 0;
+    }
+    h4 {
+        margin: 10px 0;
+    }
+}
+
+.add h4 a {
+    text-decoration: none;
+}
+
+#dituContent {
+    width: 400px;
+    height: 370px;
+    margin: 7vh auto;
+}
+
+.iw_poi_title {
+    color: #65c4aa;
+    font-weight: bold;
+    overflow: hidden;
+    padding-right: 13px;
+    white-space: nowrap;
+}
+
+.iw_poi_content {
+    font: 12px arial, sans-serif;
+    overflow: visible;
+    padding-top: 4px;
+    white-space: -moz-pre-wrap;
+    word-wrap: break-word
+}
+
+// download页面
+// 下载按钮
+.store {
+    width: 220px;
+    height: 80px;
+    border-radius: 5px;
+    background: #FFFFFF;
+    display: inline-block;
+    margin-top: 153px;
+    margin-bottom: 153px;
+    div {
+        display: inline-block;
+
+    }
+}
+
+.phone-ico {
+    margin-top: -30px;
+    width: 44px;
+    height: 44px;
+}
+
+.download-text {
+    width: 140px;
+    height: 40px;
+    font-size: 13px;
+    color: #000000;
+    margin-top: 19px;
+}
+
+.download-box {
+    margin: 78px 0 0;
+}
+
+.download-code {
+    padding-bottom: 40px;
+}
+
+.bluetooth-text {
+    color: #FFFFFF;
+    font-size: 13px;
+}
+
+// 下载应用信息
+#MainDown .Frame1 {
+    float: left;
+    border-right: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
+    background: url(../images/down-ios.png) no-repeat center;
+}
+
+#MainDown .Frame2 {
+    float: left;
+    border-bottom: 1px solid #CCCCCC;
+    background: url(../images/down-and.png) no-repeat center;
+}
+
+#MainDown span.FrameText {
+    float: left;
+    font-size: 16px;
+    color: #666666;
+    margin: 150px 0px 5px 42%;
+}
+
+#MainDown .Frame31 {
+    float: left;
+    min-height: 300px;
+    border-right: 1px solid #CCCCCC;
+    .FrameText1 {
+        float: left;
+        font-size: 14px;
+        color: #999999;
+        margin: 95px 0 0 33%;
+    }
+}
+
+#MainDown .Frame32 {
+    float: left;
+    min-height: 300px;
+    .FrameText2 {
+        float: left;
+        font-size: 14px;
+        color: #999999;
+        padding: 20px 30px 15px 30px;
+        p {
+            margin-bottom: 10px;
+            margin-top: 10px;
+            line-height: 24px;
+        }
+    }
+}
+
+// protocol页面
+.pro-title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.pro-text {
+    width: 80%;
+    margin: 0 auto;
+    h2, h3 {
+        margin: 10px;
+        color: #65c4aa;
+    }
+}
+
+// 动画
+@-webkit-keyframes btnRotate {
+    0% {
+        -webkit-transform: rotateZ(0deg);
+    }
+    100% {
+        -webkit-transform: rotateZ(360deg);
+    }
+}
+
+.img-rotate {
+    -webkit-animation: btnRotate 0.6s ease-in-out;
+}
+
+@-webkit-keyframes btnRotate-back {
+    0% {
+        -webkit-transform: rotateZ(360deg);
+    }
+    100% {
+        -webkit-transform: rotateZ(0deg);
+    }
+}
+
+.img-rotate-back {
+    -webkit-animation: btnRotate-back 0.6s ease-in-out;
+}
+
+// 兼容-o-
+
+@-o-keyframes btnRotate {
+    0% {
+        -o-transform: rotateZ(0deg);
+    }
+    100% {
+        -o-transform: rotateZ(360deg);
+    }
+}
+
+.img-rotate {
+    -o-animation: btnRotate 0.6s ease-in-out;
+}
+
+@-o-keyframes btnRotate-back {
+    0% {
+        -o-transform: rotateZ(360deg);
+    }
+    100% {
+        -o-transform: rotateZ(0deg);
+    }
+}
+
+.img-rotate-back {
+    -o-animation: btnRotate-back 0.6s ease-in-out;
+}
+
+// 兼容-moz-
+
+@-moz-keyframes btnRotate {
+    0% {
+        -moz-transform: rotateZ(0deg);
+    }
+    100% {
+        -moz-transform: rotateZ(360deg);
+    }
+}
+
+.img-rotate {
+    -moz-animation: btnRotate 0.6s ease-in-out;
+}
+
+@-moz-keyframes btnRotate-back {
+    0% {
+        -moz-transform: rotateZ(360deg);
+    }
+    100% {
+        -moz-transform: rotateZ(0deg);
+    }
+}
+
+.img-rotate-back {
+    -moz-animation: btnRotate-back 0.6s ease-in-out;
+}
+
+//兼容-ms-
+@-ms-keyframes btnRotate {
+    0% {
+        -ms-transform: rotateZ(0deg);
+    }
+    100% {
+        -ms-transform: rotateZ(360deg);
+    }
+}
+
+.img-rotate {
+    -ms-animation: btnRotate 0.6s ease-in-out;
+}
+
+@-ms-keyframes btnRotate-back {
+    0% {
+        -ms-transform: rotateZ(360deg);
+    }
+    100% {
+        -ms-transform: rotateZ(0deg);
+    }
+}
+
+.img-rotate-back {
+    -ms-animation: btnRotate-back 0.6s ease-in-out;
+}

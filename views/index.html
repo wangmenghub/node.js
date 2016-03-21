@@ -1,0 +1,208 @@
+<%- include header.html -%>
+<%- include top.html -%>
+<div class="g-doc">
+    <div class="g-bd" id="js-bdcnt">
+        <!-- 首屏信息-->
+        <div class="m-bd m-bd0 imgbg0 js-bd0" style="height:100%;">
+            <div class="m-wrap">
+                <div class="m-mnbox text-center">
+                    <!--<h1 class="hdline"><%= site.name%></h1>-->
+
+                    <!--<h2 class="subtlt">开 启 甜 蜜 新 时 代</h2>-->
+
+                    <!--<p class="p">高科技智能情趣跳蛋<br/>高潮+锻炼=两不误！<br/>为您量身定做的APP情趣跳蛋</p>-->
+                    <!--<img src="/images/youmimi.png" alt="images"/>-->
+
+                    <!--<h1 class="price">299元</h1>-->
+                </div>
+                <div style="margin: 0 auto;margin-top: -60px;height: 51%; text-align: center">
+                    <img src="/images/banner-logo.png" id="banner-logo" alt="" class="img-responsive" style="height: 90%;margin: 0 auto"/>
+                    <div id="border-bottom" style="border-bottom: 1px solid #898989;margin: 1% auto"></div>
+                    <h1 style="font-size: 24px;color: #2b2b2b">有情 · 有趣 · 友蜜蜜</h1>
+                </div>
+
+            </div>
+
+            <!--<div class="text-center btn-top">-->
+                <!--<a href="<%=mallUrl%>" class="u-btn u-btn-w2">点击购买</a>-->
+            <!--</div>-->
+
+            <div class="m-hdtlt" style="position:absolute;left:0;">
+                <b class="u-gobtn js-gobtn" data-target="#tar1"></b>
+
+                <h3 class="tt">看你想看，聊你想聊，情趣生活从这开始</h3>
+            </div>
+        </div>
+        <div class="section js-section imgbg1" data-stellar-background-ratio="0.03"></div>
+        <!-- 震动模式-->
+        <div class="m-bd m-bd1 js-imgtxt">
+            <div id="tar1"></div>
+            <div class="mimi-one">
+                <div class="container" style="height: 100%">
+                    <div class="shake-block row">
+                        <div class="shake-left col-md-6 col-xs-6">
+                            <div class="shake-left-left long-shake who-shake"></div>
+                            <div class="shake-left-middle"></div>
+                            <div class="shake-left-right long-shake who-shake"></div>
+                        </div>
+                        <div class="shake-right col-md-6 col-xs-6">
+                            <h1>解放你的双手，尽情享受</h1>
+
+                            <div class="one-text">
+                                <p>采用顶级硅胶、根据亚洲女性进行贴心设计、超强动力、创新外放式穿戴。</p>
+                            </div>
+                            <div class="shake-right-block-icon-box">
+                                <div class="shake-right-block cur" id="shake1">
+                                    <div class="shake-right-block-icon shake-icon1"></div>
+                                    <p>微震</p>
+                                </div>
+                                <div class="shake-right-block" id="shake2">
+                                    <div class="shake-right-block-icon shake-icon2"></div>
+                                    <p>中震</p>
+                                </div>
+                                <div class="shake-right-block" id="shake3">
+                                    <div class="shake-right-block-icon shake-icon3"></div>
+                                    <p>强震</p>
+                                </div>
+                                <div class="shake-right-block" id="shake4">
+                                    <div class="shake-right-block-icon shake-icon4"></div>
+                                    <p>停震</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <b class="u-gobtn js-gobtn" data-target="#tar2"></b>
+        </div>
+        <div class="section js-section imgbg2" data-stellar-background-ratio="0.05"></div>
+        <!-- 远程控制-->
+        <div class="m-bd m-bd2 js-imgtxt">
+            <div id="tar2"></div>
+            <div class="mimi-two container">
+                <div class="mimi-two-inner row">
+                    <div class="col-md-8 col-sm-8">
+                        <img src="../images/465x364.png" alt="" class="img-responsive mimi-two-img"/>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="mimi-two-text">
+                            <h1>远程控制</h1>
+
+                            <p>10种频率随意切换 <br/>
+                                多种情景，一手掌握，身随音动 <br/>
+                                静如处子，“震”如脱兔</p>
+                            <% if(downloadUrl.iOS !== ''){ %>
+                            <a href="<%=downloadUrl.iOS%>" target="_blank" class=" btn-ios"><span
+                                class="down-btn-ios"></span><b>iOS下载</b></a>
+                            <%} else{%>
+                            <a href="javascript:0" target="_blank" class=" btn-ios"><span
+                                class="down-btn-ios"></span><b>敬请期待</b></a>
+                            <%}%>
+                            <a href="<%=downloadUrl.android%>" class=" btn-android"><span
+                                class="down-btn-android"></span><b>Android下载</b></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <b class="u-gobtn js-gobtn" data-target="#tar3"></b>
+        </div>
+        <div class="section js-section imgbg3" data-stellar-background-ratio="0.05"></div>
+        <!-- 软件介绍-->
+        <div class="m-bd m-bd3 js-imgtxt">
+            <div id="tar3"></div>
+            <div class="container">
+                <div class="header">
+                    <div class="col-md-12 text-center header-title">
+                        <h1><%= site.name%>，让我们的爱情更甜蜜</h1>
+                    </div>
+                    <div class="col-md-12 text-center">
+                        <p>通过结合智能芯片及手机APP使用户多感官、多场景体验情趣生活。</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-12 text-center">
+                            <div class="img-1">
+                                <img src="../images/118x118-03.png" alt="" onMouseOver="this.className='img-rotate'"
+                                     onMouseOut="this.className='img-rotate-back'"/>
+
+                                <p class="p">匿名社交+远程操控</p>
+
+                                <p>让用户一键匹配 时时互动</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12 text-center">
+                            <div class="img-1">
+                                <img src="../images/118x118-02.png" alt="" onMouseOver="this.className='img-rotate'"
+                                     onMouseOut="this.className='img-rotate-back'"/>
+
+                                <p class="p"><%= site.name%>社区</P>
+
+                                <p>传播情趣生活理念</p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12 text-center">
+                            <div class="img-1">
+                                <img src="../images/114x114-01.png" alt="" onMouseOver="this.className='img-rotate'"
+                                     onMouseOut="this.className='img-rotate-back'"/>
+
+                                <p class="p">医用液态硅胶</p>
+
+                                <p>打造婴儿皮肤般柔软触感</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <b class="u-gobtn js-gobtn" data-target="#tar4"></b>
+        </div>
+        <div class="section js-section imgbg4" data-stellar-background-ratio="0.05"></div>
+        <!-- 页脚-->
+        <div class="m-bd m-bd4" style="height: 236px">
+            <div id="tar4"></div>
+            <!--底部导航信息-->
+            <div class="footer-top text-center">
+                <div class="container text-left">
+                    <div class="div-left">
+                        <ul class="div-left-1">
+                            <li><a href="/about">关于我们</a></li>
+                            <li><a href="/use-agreement">用户协议</a></li>
+                        </ul>
+                        <ul class="div-left-2">
+                            <li><span>服务热线</span></li>
+                            <li><span>010-57028880</span></li>
+                        </ul>
+                        <ul class="div-left-3">
+                            <li><span>服务邮箱</span></li>
+                            <li><a href="mailto:kf@hxd-inc.com" class="email">kf@hxd-inc.com</a></li>
+                        </ul>
+                        <ul class="div-left-4 text-center">
+                            <li><img src="../images/xiaomishuo.png" alt=""/></li>
+                            <li><span>扫一下</span></li>
+                            <li><span>关注“小蜜说”</span></li>
+                        </ul>
+                        <ul class="div-left-5 text-center">
+                            <li><img src="../images/youmimi.net.png" alt=""/></li>
+                            <li><span>扫一下</span></li>
+                            <li><span>让生活更情趣</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <footer class="text-center footer">
+                <div class="container">
+                    <p style="margin: 5px 0 5px 0;"><a href="http://www.miitbeian.gov.cn" style="color: #ffffff"
+                                                       target="_blank">京ICP备15027647号</a></p>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+</div>
+<script>
+    // 动态设置logo底部的线宽度
+    $(function(){
+        var w = $('#banner-logo').width();
+        $('#border-bottom').width(w + 20);
+    })
+</script>
+<%- include end.html -%>

@@ -1,0 +1,62 @@
+<!--&lt;!&ndash;底部导航信息&ndash;&gt;-->
+<!--<footer class="text-center footer">-->
+    <!--<div class="container">-->
+        <!--<p style="margin: 5px 0 5px 0"><a href="http://www.miitbeian.gov.cn" style="color: #ffffff" target="_blank">京ICP备15027647号</a></p>-->
+    <!--</div>-->
+<!--</footer>-->
+<!--移动端，下载浮动框-->
+<input type="hidden" id="platform" value="<%=platform%>">
+<div id="download_mob"
+     style="position: fixed;bottom:0;background-color: rgba(0, 0, 0, 0.7);width: 100%;margin: 0px auto;padding: 5px 0px;height: 60px">
+    <div style="float: left;width: 60%;padding-left: 15px;height: 50px;padding-top: 5px;">
+        <table>
+            <tr>
+                <td><a href="/"><img src="../images/asfv.png" style="width:35px ;height:35px;margin-bottom: 1px"/></a></td>
+                <td style="padding-left: 10px;color:#dddddd">
+                    <div style="font-size: 16px"><%=site.name%></div>
+                    <div style="font-size: 12px;color:#999999">爱·更·甜蜜</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div style="float: left;width: 40%;height:50px;line-height: 50px;text-align: right;padding-right: 15px">
+        <% if(inWeixin!==undefined){%>
+        <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.hxd.love" class="btn btn-success btn-md"
+           style="padding: 3px 12px;">立即下载</a>
+        <%} else {%>
+        <% if (downloadUrl=='') {%>
+        <a href="JavaScript:0" onclick="downloadInWeixin()" class="btn btn-success btn-md"
+           style="padding: 3px 12px;">即将上线</a>
+        <%} else{%>
+        <a href="<%=downloadUrl%> " onclick="downloadInWeixin()" class="btn btn-success btn-md"
+           style="padding: 3px 12px;">立即下载</a>
+        <%}}%>
+        <img src="../images/download_mob.png" style="position: relative;top: -15px;left: 10px;" onclick="del_mob()"/>
+    </div>
+</div>
+
+<div id="weixininfo" style="z-index: 999;">
+    <img id="img" src="../images/weixininfo.png"/>
+</div>
+<div id="weixindownload" style="z-index: 998;">
+    <img id="img1" src="../images/weixindownload.png"/>
+</div>
+<style type="text/css">
+    #weixininfo,#weixindownload {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        text-align: center;
+        display: none;
+    }
+
+    #weixininfo img,#weixindownload img {
+        width: 100%;
+    }
+</style>
+<script type="text/javascript">
+    function del_mob() {
+        $('#download_mob').slideUp();
+    }
+</script>

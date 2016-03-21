@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title><%= site.name%></title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <style>
+        .ml-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            width: 100%;
+            height: 70px;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+        #logo{
+            position: relative;
+            top: 13px;
+            left: 65px;
+        }
+
+        .ml-link {
+            float: right;
+            margin: 8px 55px 0 0;
+            font-size: 14px;
+            line-height: 50px;
+
+        }
+
+        .ml-link a {
+            display: inline-block;
+            margin: 0 13px;
+            font-size: 14px;
+        }
+        .ml-link a:hover {
+            color:#65c4aa;
+        }
+
+        .center-wrap {
+            position: relative;
+            z-index: 1;
+            width: 80%;
+            height: 100%;
+            margin: 0 auto;
+        }
+        .M1{
+            height: 100%;
+            position: relative;
+            background-repeat: no-repeat;
+            background-color: #f6f6f6;
+            background-position: center top;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;;
+
+        }
+        .M1-1{
+            background-image: url(../images/newimages/M1/M1-bg1.jpg);
+        }
+        .M1-2{
+            background-image: url(../images/newimages/M1/M1-bg2.jpg);
+        }
+        .M1-3{
+            background-image: url(../images/newimages/M1/M1-bg3.jpg);
+        }
+        .M1-4{
+            background-image: url(../images/newimages/M1/M1-bg4.jpg);
+        }
+        @media screen and (min-width: 1600px), screen and (min-height: 800px), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-device-pixel-ratio: 2) {
+            .M1-1{
+                background-image: url(../images/newimages/M1/M1-bg1-lg.jpg);
+            }
+            .M1-2{
+                background-image: url(../images/newimages/M1/M1-bg2-lg.jpg);
+            }
+            .M1-3{
+                background-image: url(../images/newimages/M1/M1-bg3-lg.jpg);
+            }
+            .M1-4{
+                background-image: url(../images/newimages/M1/M1-bg4-lg.jpg);
+            }
+        }
+    </style>
+    <script src="http://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/javascripts/jquery.fullPage.min.js"></script>
+    <script src="http://cdn.staticfile.org/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script>
+        $(function () {
+            var $mlNav = $('.ml-nav');
+            $('#dowebok').fullpage({
+                verticalCentered: !1,
+                'navigation':true,
+                navigationTooltips:['智能情趣','贴合人体','多种模式','远程控制','联系我们'],
+                navigationColor:['#666666'],
+                onLeave: function (index, nextIndex, direction) {
+                    if (direction == 'down') {
+                        $mlNav.animate({
+                            top: -66
+                        }, 400);
+                    } else if(direction == 'up') {
+                        $mlNav.animate({
+                            top: 0
+                        }, 400);
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+<div class="ml-nav">
+    <div class="center-wrap">
+        <a href="/"id="logo">
+            <img src="../images/logo.png" alt="Logo" title="Use cret" style="display: inline-block;width: 44px"/>
+            <img src="../images/logo_text.png" alt="Logo" title="友蜜蜜" id="logo_text" style="width: 114px"/>
+        </a>
+        <p class="ml-link">
+            <a href="/">首页</a>
+            <a href="/product">产品介绍</a>
+            <a href="/download">下载</a>
+            <a href="/about">关于我们</a>
+            <a href="/contact">联系我们</a>
+        </p>
+    </div>
+</div>
+
+<div id="dowebok">
+    <div class="section">
+        <div class="M1 M1-1"></div>
+    </div>
+
+    <div class="section">
+        <div class="M1 M1-2"></div>
+    </div>
+
+    <div class="section">
+        <div class="M1 M1-3"></div>
+    </div>
+
+    <div class="section">
+        <div class="M1 M1-4"></div>
+    </div>
+    <!--页脚-->
+    <div class="section footer fp-auto-height">
+        <<div class="footer-top text-center">
+        <div class="container text-left box">
+            <div class="div-left">
+                <ul class="div-left-1">
+                    <li><a href="/about">关于我们</a></li>
+                    <li><a href="/use-agreement">用户协议</a></li>
+                </ul>
+                <ul class="div-left-2">
+                    <li><span>服务热线</span></li>
+                    <li><a>010-57028880</a></li>
+                </ul>
+                <ul class="div-left-3">
+                    <li><span>服务邮箱</span></li>
+                    <li><a href="mailto:kf@hxd-inc.com" class="email">kf@hxd-inc.com</a></li>
+                </ul>
+                <ul class="div-left-4 text-center">
+                    <li><img src="../images/xiaomishuo.png" alt=""/></li>
+                    <li><span>扫一下</span></li>
+                    <li><span>关注“小蜜说”</span></li>
+                </ul>
+                <ul class="div-left-5 text-center">
+                    <li><img src="../images/youmimi.net.png" alt=""/></li>
+                    <li><span>扫一下</span></li>
+                    <li><span>让生活更情趣</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        <footer class="text-center footer">
+            <div class="container">
+                <p style="margin: 5px 0 5px 0"><a href="http://www.miitbeian.gov.cn" style="color: #ffffff" target="_blank">京ICP备15027647号</a></p>
+            </div>
+        </footer>
+    </div>
+</div>
+
+</body>
+</html>

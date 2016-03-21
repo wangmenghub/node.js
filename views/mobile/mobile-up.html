@@ -1,0 +1,250 @@
+<script>
+    <% if (inWeixin) { %>
+    wx.config({
+        debug: <%=wxJSSDKConfig.debug%>,
+        appId: '<%=wxJSSDKConfig.appId%>',
+        timestamp: <%=wxJSSDKConfig.timestamp%>,
+        nonceStr: '<%=wxJSSDKConfig.nonceStr%>',
+        signature: '<%=wxJSSDKConfig.signature%>',
+        jsApiList: ['onMenuShareAppMessage', 'onMenuShareTimeline']
+    });
+
+    wx.ready(function() {
+        var share = {
+            title: '<%=site.slogan%>',
+            desc: '高科技智能情趣跳蛋，高潮+锻炼=两不误！为您量身定做的APP情趣跳蛋。',
+            link: window.location.href,
+            imgUrl: 'http://' + window.location.host + '/images/wxShare.jpg'
+        };
+
+        // 分享给朋友
+        wx.onMenuShareAppMessage({
+            title: share.title,
+            desc: share.desc,
+            link: share.link,
+            imgUrl: share.imgUrl,
+            success: function(res) {
+            },
+            cancel: function(res) {
+            }
+        });
+
+        // 分享到朋友圈
+        wx.onMenuShareTimeline({
+            title: share.title,
+            link: share.link,
+            imgUrl: share.imgUrl,
+            success: function() {
+            },
+            cancel: function() {
+            }
+        });
+    });
+
+    wx.error(function(res) {
+    });
+<%}%>
+
+</script>
+<div style="display: none">
+    <img src="../images/wxShare.jpg" alt=""/>
+</div>
+<style>
+    h3 {
+        font-weight: bold;
+        margin: 20px 0;
+    }
+
+    .color {
+        color: #65c4aa;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+
+    /*价格*/
+    .money {
+        color: #65c4aa;
+        margin: 20px 0;
+    }
+
+    /*商城按钮*/
+    .shop {
+        display: inline-block;
+        width: 70%;
+        height: 70px;
+        border-radius: 50px;
+        background-color: #65c4aa;
+        line-height: 70px;
+        color: #ffffff;
+        font-size: 24px;
+        margin-bottom: 50px;
+    }
+
+    .mobile-two h3 {
+        margin-top: 50px;
+    }
+
+    /*震动图片*/
+    .mobile-img {
+        height: 250px;
+        margin-top: 30px;
+    }
+
+    .mobile-img-center {
+        margin: 0 20px;
+    }
+
+    /*震动按钮*/
+    .mobile-two .ul {
+        margin: 30px auto;
+        width: 290px;
+        margin-bottom: 50px;
+    }
+
+    .mobile-two .ul li {
+        float: left;
+        width: 53px;
+        height: 53px;
+        margin-left: 15px;
+        line-height: 130px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    .mobile-two .li-1 {
+
+        background: url("../images/mobile-icon.png") 0 -113px no-repeat;
+    }
+
+    .mobile-two .li-2 {
+        background: url("../images/mobile-icon.png") 0 -195px no-repeat;
+    }
+
+    .mobile-two .li-3 {
+        background: url("../images/mobile-icon.png") 0 -277px no-repeat;
+    }
+
+    .mobile-two .li-4 {
+        background: url("../images/mobile-icon.png") 0 -360px no-repeat;
+    }
+
+    .mobile-three .shop span {
+        display: inline-block;
+        width: 36px;
+        height: 45px;
+        margin: 12px 0;
+    }
+
+    .mobile-three .shop b {
+        position: relative;
+        top: -25px;
+        margin-left: 10px;
+    }
+
+    .mobile-three .down-btn-ios {
+        background: url("../images/icon.png") -366px -137px;
+    }
+
+    .mobile-three .down-btn-android {
+        background: url("../images/icon.png") -366px -72px;
+    }
+
+    .mobile-three-img {
+        margin: 30px 0 50px 0;
+    }
+
+    .mobile-four img {
+        margin: 15px auto;
+    }
+
+    .mobile-four .margin-bottom {
+        margin-bottom: 30px;
+    }
+    .mobile-btn{
+        border: 1px solid #898989;
+        border-radius: 17px;
+        display: inline-block;
+        width: 150px;
+        height: 35px;
+        line-height: 35px;
+        margin: 30px auto;
+    }
+</style>
+<div class="container text-center">
+    <!-- 购买块-->
+    <div class="mobile-one" style="border-bottom: 1px solid #848484">
+        <!--<img src="../images/mobile-bg.png" alt="" class="img-responsive"/>-->
+
+        <!--<h3>友蜜蜜——开启甜蜜新时代</h3>-->
+
+        <!--<p>高科技智能情趣跳蛋高潮+锻炼=两不误！<br/>为您量身定做的APP情趣跳蛋!</p>-->
+
+        <!--<h1 class="money">299元</h1>-->
+
+        <!--<a href="<%=mallUrl%>" onclick="downloadInWeixin()" class="shop" >商城购买</a>-->
+        <!-- 2015.12.2改-->
+        <div id="mobile-box" style="margin: 0 auto;text-align: center;">
+            <img src="/images/banner-logo.png" id="banner-logo" alt="" class="img-responsive" style="width: 50%;margin: 0 auto;margin-top: 25%"/>
+            <div id="border-bottom" style="border-bottom: 1px solid #898989;margin: 10px auto"></div>
+            <h1 style="font-size: 20px;color: #2b2b2b; font-weight: normal">有情 · 有趣 · 友蜜蜜</h1>
+            <%if(platform == 'iOS'){%>
+            <%if(inWeixin!==undefined){%>
+            <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.hxd.love" target="_blank"
+               class="mobile-btn">iOS下载</a>
+            <%}else{%>
+            <%if(downloadUrl==''){%>
+            <a href="javascript:0" onclick="downloadInWeixin()" target="_blank" class="mobile-btn">即将上线</a>
+            <%} else{%>
+            <a href="<%=downloadUrl%>" onclick="downloadInWeixin()" target="_blank" class="mobile-btn">iOS下载</a>
+            <%}}%>
+            <%} else{%>
+            <%if(inWeixin!==undefined){%>
+            <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.hxd.love" class="mobile-btn">Android下载</a>
+            <%}else{%>
+            <%if(downloadUrl==''){%>
+            <a href="javascript:0" onclick="downloadInWeixin()" class="mobile-btn">即将上线</a>
+            <%} else{%>
+            <a href="<%=downloadUrl%>" onclick="downloadInWeixin()" class="mobile-btn">Android下载</a>
+            <%}}%>
+            <%}%>
+        </div>
+
+    </div>
+    <!-- 震动块-->
+    <div class="mobile-two">
+
+        <h3>解放你的双手，尽情享受</h3>
+
+        <p>采用顶级硅胶、根据亚洲女性进行贴心设计、</p>
+
+        <p>超强动力、创新外放式穿戴。</p>
+        <img src="../images/shake_left_right.png" alt="" class="mobile-img mobile-img-right who-shake long-shake"/>
+        <img src="../images/126x304.png" alt="" class="mobile-img mobile-img-center"/>
+        <img src="../images/shake_left_left.png" alt="" class="mobile-img mobile-img-left who-shake long-shake"/>
+        <ul class="ul text-center">
+            <li class="li-1 color"
+                onclick="bellBtnClick([150,50,150,50,150,50,150,50,150,50,150,50,150,50,150,50,150,50,150,50,150,50,150,50,150,50,150,50,150,50,150,50,150,50,150,50,150,50,150,50,150,50,150,50,150,50,150])">
+                微震
+            </li>
+            <li class="li-2"
+                onclick="bellBtnClick([100,30,100,30,100,30,100,30,100,30,100,30,100,30,100,30,100,30,100,30,100,30,100,30,100,30,100,30,100,30,100,30,100,30,100,30,100,30,100,30,100,30,100,30,100,30,100])">
+                中震
+            </li>
+            <li class="li-3"
+                onclick="bellBtnClick([70,20,70,20,70,20,70,20,70,20,70,20,70,20,70,20,70,20,70,20,70,20,70,20,70,20,200,20,70,20,70,20,70,20,70,20,70,20,70,20,70,20,70,20,70,20,70,20,70,200,70,20,70,20,70,20,70,20,70,20,70,20,70,20,70,20,70,20,70,20,70,20,70,20,70,20,500])">
+                强震
+            </li>
+            <li class="li-4" onclick="bellBtnClick(0)">停震</li>
+        </ul>
+        <div class="clear"></div>
+    </div>
+    <!-- 控制块-->
+    <div class="mobile-three" style="border-top: 1px solid #848484; margin-top: 80px">
+        <h3>远程控制</h3>
+
+        <p>10种频率随意切换
+            多种情景，一手掌握，身随音动
+            静如处子，“震”如脱兔</p>
+        <img src="../images/465x364.png" alt="" class="img-responsive mobile-three-img"/>

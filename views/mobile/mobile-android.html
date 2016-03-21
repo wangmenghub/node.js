@@ -1,0 +1,21 @@
+<%- include mobile-header.html -%>
+<%- include mobile-top.html -%>
+
+<%- include mobile-up.html -%>
+
+<%if(inWeixin!==undefined){%>
+<a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.hxd.love" class="shop mobile-three-btn-android">
+    <span class="down-btn-android"></span><b>Android下载</b></a>
+<%}else{%>
+<%if(downloadUrl==''){%>
+<a href="javascript:0" onclick="downloadInWeixin()" class="shop mobile-three-btn-android">
+    <span class="down-btn-android"></span><b>即将上线</b></a>
+<%} else{%>
+<a href="<%=downloadUrl%>" onclick="downloadInWeixin()" class="shop mobile-three-btn-android">
+    <span class="down-btn-android"></span><b>Android下载</b></a>
+<%}}%>
+
+<%- include mobile-down.html -%>
+
+<%- include mobile-footer.html -%>
+<%- include mobile-end.html -%>

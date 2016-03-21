@@ -1,0 +1,74 @@
+</div>
+<!--展示块-->
+<div class="mobile-four" style="border-top: 1px solid #848484;">
+    <h3>友蜜蜜，让我们的爱情更甜蜜</h3>
+
+    <p>通过结合智能芯片及手机APP使用户多感官、多场景体验情趣生活。</p>
+
+    <img src="../images/118x118-03.png" alt=""/>
+
+    <p>匿名社交+远程操控</p>
+
+    <p>让用户一键匹配 时时互动</p>
+    <img src="../images/118x118-02.png" alt=""/>
+
+    <p>友蜜蜜社区</P>
+
+    <p>传播情趣生活理念</p>
+
+    <img src="../images/114x114-01.png" alt=""/>
+
+    <p>医用液态硅胶</p>
+
+    <p class="margin-bottom">打造婴儿皮肤般柔软触感</p>
+
+
+</div>
+</div>
+<script>
+    // 动态设置logo底部的线宽度
+    $(function(){
+        var w = $('#banner-logo').width();
+        var h = $(window).height();
+        $('#border-bottom').width(w + 20);
+        $('#mobile-box').height(h - 100);
+    })
+</script>
+<script>
+
+    $(function () {
+        //手机取消导航栏固定/透明
+        $('#navbar-fixed-top').removeClass('navbar-fixed-top');
+        //logo居中
+        $('#logo').css('padding-top', 3);
+    });
+    // 振动模式
+    $('.li-1').on('click', function () {
+        $(this).siblings().removeClass("color");
+        $(this).addClass("color");
+        $('.who-shake').removeClass("middle-shake").removeClass("short-shake").addClass("long-shake");
+    });
+    $('.li-2').on('click', function () {
+        $(this).siblings().removeClass("color");
+        $(this).addClass("color");
+        $('.who-shake').removeClass("long-shake").removeClass("short-shake").addClass("middle-shake");
+    });
+    $('.li-3').on('click', function () {
+        $(this).siblings().removeClass("color");
+        $(this).addClass("color");
+        $('.who-shake').removeClass("middle-shake").removeClass("short-shake").addClass("short-shake");
+    });
+    $('.li-4').on('click', function () {
+        $(this).siblings().removeClass("color");
+        $(this).addClass("color");
+        $('.who-shake').removeClass("long-shake").removeClass("short-shake").removeClass("middle-shake");
+    });
+    // 触发手机的震动（仅支持安卓手机）
+    function bellBtnClick(s) {
+        if (navigator.vibrate) {
+            navigator.vibrate(s);//震动秒数
+        } else if (navigator.webkitVibrate) {
+            navigator.webkitVibrate(s);
+        }
+    }
+</script>
